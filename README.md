@@ -1,6 +1,6 @@
 # CP-Templates-Snippets
 
-This my snippets for CP-Templates to use in VS-Code, It's made for competitive programming using `C++` language.
+These are my snippets for CP-Templates to use in VS-Code, It's made for competitive programming using `C++` language.
 
 ---
 
