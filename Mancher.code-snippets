@@ -1,0 +1,26 @@
+{
+	"Mancher": {
+		"prefix": "Mancher",
+		"body": [
+		  "string longestPalSubstring(string& s){",
+		  "    int strLen = 2 * sz(s) + 3, maxLen = 0, start = 0, maxRight = 0 ,center = 0;",
+		  "    string str = \"@#\";",
+		  "    for (char& c : s)",
+		  "        str.push_back(c), str.push_back('#');",
+		  "    str.push_back('$');",
+		  "    vector < int > p(strLen);",
+		  "    for(int i = 1; i < strLen - 1; i++){",
+		  "        if (i < maxRight)",
+		  "            p[i] = min(maxRight - i, p[2 * center - i]);",
+		  "        while (str[i + p[i] + 1] == str[i - p[i] - 1]) p[i]++;",
+		  "        if (i + p[i] > maxRight)",
+		  "            center = i, maxRight = i + p[i];",
+		  "        if (p[i] > maxLen)",
+		  "            start = (i - p[i] - 1) / 2, maxLen = p[i];",
+		  "    }",
+		  "    return s.substr(start, maxLen);",
+		  "}"
+		],
+		"description": "Mancher"
+	}
+}
